@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family-Poppins: wght@300; 400; 500; 600; 700&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(83, 77, 77, 0.75),rgba(0,0,0,0.75)),url('../img/homeBack.jpg');
+    background-size: cover;
+    backdrop-filter: blur(20px);
+}
+/* .banner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(83, 77, 77, 0.75),rgba(0,0,0,0.75)),url('../img/homeBack.jpg');
+    background-size: cover;
+    background-position: center;
+} */
+.temp
+{
+    color: blue;
+}
+.content
+{
+    position: relative;
+    max-width: 430px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: aliceblue;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    animation: nav-load 400ms ease-in-out;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+.content .forms
+{
+    padding: 30px;
+}
+.content .forms .title
+{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+.forms .title::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 25px;
+}
+.forms .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+.input-field button{
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    background-color: aquamarine;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    background-color: aliceblue;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    left: 0;
+}
+.input-field input:is(:focus,:valid) ~i
+{
+    border-bottom-color: black;
+}
+.input-field input:is(:focus,:valid) ~i
+{
+    color: black;
+}
+.forms .checkbox-txt
+{
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 5%;
+}
+.checkbox-txt .checkbox-content
+{
+    display: flex;
+    align-items: center;
+}
+.checkbox-content input{
+    accent-color: aquamarine;
+}
+.form a{
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+#enable1
+{
+    display: none;
+}
+#enable2
+{
+    display: none;
+}
+#enable3
+{
+    display: none;
+} 
+#enable4
+{
+    display: none;
+}
+@keyframes nav-load {
+    0%{
+        transform: translateY(-100%);
+        transform: scale(0);
+    }
+    50%{
+        transform: translateY(-50%);
+        transform: scale(1.1);
+    }
+    100%{
+        transform: translateY(0);
+        transform: scale(1);
+    }
+}
